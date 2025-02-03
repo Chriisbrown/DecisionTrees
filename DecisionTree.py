@@ -82,7 +82,6 @@ class DecisionTree():
             predictions.append(self._classify(row,self.tree))
         return predictions
     
-
     def _print_tree(self,node, spacing="") -> None:
         """
         Print the tree, recursively

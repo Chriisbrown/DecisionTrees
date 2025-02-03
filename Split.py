@@ -79,9 +79,10 @@ def find_best_split(dataset : DataSet, SplitFunc) -> tuple:
     # Find the split that maximises the information gain, brute force check every feature, every value
     best_information_gain = 0
     best_threshold = None
+    best_split = None
     # Calculate original impurity of the dataset
     dataset.gini_impurity()
-
+    print(dataset.impurity)
     # Iterate through features
     for column in dataset.features:
         values = dataset.find_unique(column)
